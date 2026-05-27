@@ -13,7 +13,7 @@ financial potential"
         <div class="mt-5 w-50 md:w-100">
           <UiPartsButtonTransparent
             label="Shop Now"
-            href="mailto:info@enness.co.uk"
+            href="mailto:ahmed.a@bluemooninternationalc.com"
           >
           </UiPartsButtonTransparent>
         </div>

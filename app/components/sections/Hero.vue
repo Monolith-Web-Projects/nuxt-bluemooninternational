@@ -32,7 +32,7 @@
         >
           {{ desc }}
         </p>
-        <a src="/about">
+        <a href="/about" class="z-10">
           <button
             class="hover:bg-opacity-90 transform rounded px-6 py-3 text-white transition hover:scale-105"
             style="background-color: #815f53"

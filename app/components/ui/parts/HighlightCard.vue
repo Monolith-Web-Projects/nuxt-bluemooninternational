@@ -1,10 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  imageSrc: string;
-  imageAlt?: string;
-  title: string;
-  description: string;
-}>();
+withDefaults(
+  defineProps<{
+    imageSrc?: string;
+    imageAlt?: string;
+    title?: string;
+    description?: string;
+  }>(),
+  {
+    imageSrc: "",
+    imageAlt: "",
+    title: "",
+    description: "",
+  },
+);
 </script>
 
 <template>

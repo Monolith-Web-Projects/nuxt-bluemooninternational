@@ -1,11 +1,13 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     bgColor?: string;
   }>(),
   {
+    title: "",
+    description: "",
     bgColor: "var(--color-yale-blue)",
   },
 );

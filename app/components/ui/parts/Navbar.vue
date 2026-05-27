@@ -52,8 +52,25 @@
 
 <script setup>
 import { ref } from "vue";
+
 const open = ref(false);
+let timeoutId = null;
+
 const toggleMenu = () => {
+  // Clear any existing timeout
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+
+  // Toggle the menu
   open.value = !open.value;
+
+  // If opening, set timeout to auto-close after 3 seconds
+  if (open.value) {
+    timeoutId = setTimeout(() => {
+      open.value = false;
+      timeoutId = null;
+    }, 2000); // 3000ms = 3 seconds
+  }
 };
 </script>

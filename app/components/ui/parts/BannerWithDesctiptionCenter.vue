@@ -1,26 +1,29 @@
 <script setup lang="ts">
-type BannerTone = 'none' | 'marian' | 'dark' | 'copper' | 'dark-50'
+type BannerTone = "none" | "marian" | "dark" | "copper" | "dark-50";
 
 withDefaults(
   defineProps<{
-    imageSrc: string
-    title: string
-    description: string
+    imageSrc?: string;
+    title?: string;
+    description?: string;
     /** Preset image + overlay filters (static classes so Tailwind includes them). */
-    tone?: BannerTone
+    tone?: BannerTone;
   }>(),
   {
-    tone: 'none',
+    tone: "none",
+    imageSrc: "",
+    title: "",
+    description: "",
   },
-)
+);
 
 const imageToneClass: Record<BannerTone, string> = {
-  none: '',
-  marian: 'brightness-[0.55] saturate-[0.85]',
-  dark: 'brightness-75',
-  copper: 'banner-tone-copper__img',
-  'dark-50': 'brightness-[1]',
-}
+  none: "",
+  marian: "brightness-[0.55] saturate-[0.85]",
+  dark: "brightness-75",
+  copper: "banner-tone-copper__img",
+  "dark-50": "brightness-[1]",
+};
 </script>
 
 <template>
@@ -30,7 +33,7 @@ const imageToneClass: Record<BannerTone, string> = {
       :alt="title"
       class="h-full w-full object-cover object-center"
       :class="imageToneClass[tone]"
-    >
+    />
 
     <template v-if="tone === 'marian'">
       <div
@@ -65,7 +68,9 @@ const imageToneClass: Record<BannerTone, string> = {
     <div
       class="absolute top-1/2 left-1/2 z-10 flex h-auto w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-5"
     >
-      <div class="flex w-full flex-col gap-2 p-8 text-center items-center lg:max-w-1/2">
+      <div
+        class="flex w-full flex-col items-center gap-2 p-8 text-center lg:max-w-1/2"
+      >
         <h3 class="text-h2 text-2xl font-semibold sm:text-4xl sm:font-normal">
           {{ title }}
         </h3>
