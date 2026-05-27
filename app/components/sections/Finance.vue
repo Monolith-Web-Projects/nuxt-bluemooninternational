@@ -70,7 +70,7 @@ financial potential"
           <div class="w-50 md:w-100">
             <UiPartsButtonTransparent
               label="Contact Broker"
-              href="mailto:info@enness.co.uk"
+              href="mailto:ahmed.a@bluemooninternationalc.com"
             >
             </UiPartsButtonTransparent>
           </div>

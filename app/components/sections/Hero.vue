@@ -32,12 +32,14 @@
         >
           {{ desc }}
         </p>
-        <button
-          class="hover:bg-opacity-90 transform rounded px-6 py-3 text-white transition hover:scale-105"
-          style="background-color: #815f53"
-        >
-          Learn More
-        </button>
+        <a src="/about">
+          <button
+            class="hover:bg-opacity-90 transform rounded px-6 py-3 text-white transition hover:scale-105"
+            style="background-color: #815f53"
+          >
+            Learn More
+          </button>
+        </a>
       </div>
     </div>
   </section>
