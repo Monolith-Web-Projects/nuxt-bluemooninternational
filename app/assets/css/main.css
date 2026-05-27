@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+}
+
+@font-face {
+  src: url('fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  src: url('fonts/Raleway/Raleway-Regular.ttf');
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  /* Color Pallete */
+  --color-prussian-blue: #0A3651;
+  --color-marian-blue: #003C8A;
+  --color-light-blue: #B0CBD4;
+  --color-yale-blue: #05396E;
+  --color-pear-green: #B4D315;
+  --color-lime-green:#b4d30b;
+  --color-white: #ffff;
+  --color-charcoal-grey: #424C55;
+  --color-ashgrey: #AFC2BF;
+  --color-ecru-gold: #E4BC7E;
+  --color-hunyadi-yellow: #E2A342;
+  --color-aureolin-yellow: #E8E21F;
+  --color-copper-brown: #B27628;
+
+  /* Fonts */
+  --font-mullish: "Mulish", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+
+
+  /* Spacing */
+  --padding-top-bottom: 50px 0 50px 0;
+
+  /* Single Post */
+  --font-size-post-title: 45px;
+  --font-size-single-post-p: 1.25rem;
+  --font-line-height-post: 2.5rem;
+}
+
+html {
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+.text-h2 {
+  font-family: var(--font-raleway);
+  font-weight: 450;
+  line-height: 1.2;
+  color: var(--color-White);
+}
+
+.text-p {
+  font-family: var(--font-raleway);
+  font-weight: light;
+  line-height: 1.2;
+  color: var(--color-White);
+}
+
+/* Tailwind directives */
+.centered-text {
+  @apply text-center flex flex-col items-center justify-center gap-5;
+}
